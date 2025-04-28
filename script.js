@@ -11,4 +11,4 @@ envelope.addEventListener('click', () => {
     envelope.style.display = 'none';
   }, 1000);
   opened = true;
-});
+}); 
