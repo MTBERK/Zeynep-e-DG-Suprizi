@@ -1,0 +1,108 @@
+body {
+  background: linear-gradient(135deg, #f9d3e3 0%, #f6f7d7 100%);
+  font-family: 'Pacifico', cursive;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.85);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  padding: 32px 24px 48px 24px;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  color: #e75480;
+  margin-bottom: 32px;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+}
+
+.envelope {
+  width: 160px;
+  height: 110px;
+  margin: 0 auto 24px auto;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.envelope:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+.flap {
+  width: 160px;
+  height: 80px;
+  background: #fff0f6;
+  border: 2px solid #e75480;
+  border-bottom: none;
+  border-radius: 16px 16px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: transform 0.7s cubic-bezier(.77,0,.18,1);
+  transform-origin: bottom center;
+}
+.body {
+  width: 160px;
+  height: 80px;
+  background: #fff;
+  border: 2px solid #e75480;
+  border-top: none;
+  border-radius: 0 0 16px 16px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 1;
+}
+.click-hint {
+  display: block;
+  margin-top: 90px;
+  color: #e75480;
+  font-size: 1rem;
+  animation: bounce 1.2s infinite alternate;
+}
+@keyframes bounce {
+  to { transform: translateY(-8px); }
+}
+.letter {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+  animation: fadeIn 1.2s;
+}
+.letter.open {
+  display: flex;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.cat-img {
+  width: 180px;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(231,84,128,0.12);
+  border: 3px solid #f9d3e3;
+}
+.message {
+  background: #fff0f6;
+  border: 2px dashed #e75480;
+  border-radius: 16px;
+  padding: 24px 18px;
+  color: #e75480;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 8px rgba(231,84,128,0.07);
+}
+.message h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  color: #e75480;
+} 
